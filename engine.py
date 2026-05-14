@@ -8,8 +8,7 @@ from massive.websocket.models import WebSocketMessage, Feed, Market
 
 # --- Config from environment variables ---
 API_KEY = os.environ["MASSIVE_API_KEY"] 
-DB_URL   = os.environ["postgresql://neondb_owner:npg_sQJqnHhkor92@ep-lively-bread-aqixv2yq.c-8.us-east-1.aws.neon.tech/neondb?sslmode=require"]
-
+DB_URL   = os.environ["DATABASE_URL"]
 # --- DB Setup ---
 def get_conn():
     return psycopg2.connect(DB_URL)
