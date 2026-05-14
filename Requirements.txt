@@ -1,0 +1,2 @@
+massive
+psycopg2-binary
