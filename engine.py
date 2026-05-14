@@ -7,7 +7,7 @@ from massive import WebSocketClient
 from massive.websocket.models import WebSocketMessage, Feed, Market
 
 # --- Config from environment variables ---
-API_KEY  = os.environ["2GxgoDGhSukwYFlP9T9BOLfvi6YpNJK5"]
+API_KEY = os.environ["MASSIVE_API_KEY"] 
 DB_URL   = os.environ["postgresql://neondb_owner:npg_sQJqnHhkor92@ep-lively-bread-aqixv2yq.c-8.us-east-1.aws.neon.tech/neondb?sslmode=require"]
 
 # --- DB Setup ---
