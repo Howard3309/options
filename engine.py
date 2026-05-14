@@ -65,13 +65,7 @@ def handle_msg(msgs: List[WebSocketMessage]):
         conn.commit()
 
 # --- WebSocket Client ---
-client = WebSocketClient(
-    api_key=API_KEY,
-    feed=Feed.RealTime,
-    market=Market.Options
-)
-
-client.subscribe("AM.*")
+client = WebSocketClient(api_key=API_KEY, feed=Feed.RealTime, market=Market.Options, subscriptions=["AM.*"])
 print("🚀 Subscribed to AM.* — filtering SPX, NDX, DJX in real-time...")
 
 # Reconnect loop
